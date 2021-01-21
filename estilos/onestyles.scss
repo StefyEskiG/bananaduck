@@ -1,18 +1,43 @@
-$typo-sitio: "Montserrat", sans-serif;
-
 .main-screen {
-  background-color: #f7ffaa;
+  background-image: url("../imagenes/mainscreen.jpg");
   height: 100vh;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .main-menu {
-  background-color: rgb(255, 255, 255);
-  height: 100px;
-  font-family: $typo-sitio;
-  text-decoration: none;
+  overflow: hidden;
+
+  font-family: "Alegreya", sans-serif;
+
+  margin-right: 14.5rem;
+
+  & a {
+    float: left;
+    color: #d18ff3;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bolder;
+
+    &:hover {
+      background-color: #f7ffaa;
+      color: rgb(143, 140, 140);
+    }
+  }
+}
+.logo {
+  & img {
+    height: 6.5rem;
+    width: 6.5rem;
+  }
 }
 
-a {
-  text-decoration: none;
-  color: black;
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

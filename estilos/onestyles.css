@@ -1,17 +1,46 @@
 .main-screen {
-  background-color: #f7ffaa;
+  background-image: url("../imagenes/mainscreen.jpg");
   height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .main-menu {
-  background-color: white;
-  height: 100px;
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
+  overflow: hidden;
+  font-family: "Alegreya", sans-serif;
+  margin-right: 14.5rem;
 }
 
-a {
+.main-menu a {
+  float: left;
+  color: #d18ff3;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  color: black;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.main-menu a:hover {
+  background-color: #f7ffaa;
+  color: #8f8c8c;
+}
+
+.logo img {
+  height: 6.5rem;
+  width: 6.5rem;
+}
+
+.cabecera {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=onestyles.css.map */
