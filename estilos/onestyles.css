@@ -1,0 +1,17 @@
+.main-screen {
+  background-color: #f7ffaa;
+  height: 100vh;
+}
+
+.main-menu {
+  background-color: white;
+  height: 100px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+/*# sourceMappingURL=onestyles.css.map */

@@ -1,0 +1,18 @@
+$typo-sitio: "Montserrat", sans-serif;
+
+.main-screen {
+  background-color: #f7ffaa;
+  height: 100vh;
+}
+
+.main-menu {
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  font-family: $typo-sitio;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
