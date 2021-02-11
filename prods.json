@@ -1,0 +1,30 @@
+[
+  {
+    "precio": 2000,
+    "id": 1,
+    "title": "CAMPERA DE JEAN",
+    "talle": "L",
+    "imagen": "imagenes/camperita.jpg"
+  },
+  {
+    "precio": 1200,
+    "id": 2,
+    "title": "REMERA COLOR",
+    "talle": "M",
+    "imagen": "imagenes/remeras.jpg"
+  },
+  {
+    "precio": 2500,
+    "id": 3,
+    "title": "PANTALÓN DE JEAN",
+    "talle": "L",
+    "imagen": "imagenes/pantalon.jpg"
+  },
+  {
+    "precio": 500,
+    "id": 4,
+    "title": "MEDIAS BASICAS",
+    "talle": "39",
+    "imagen": "imagenes/medias.jpg"
+  }
+]
