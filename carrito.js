@@ -79,6 +79,7 @@ const selectCarrito = () => {
 
 const tablaFooter = document.querySelector("#footer-carrito");
 const selectFooter = () => {
+  tablaFooter.innerHTML = "";
   const template = document.querySelector("#template-footer").content;
   const fragment = document.createDocumentFragment();
 
@@ -86,7 +87,24 @@ const selectFooter = () => {
     (a, { cantidad }) => a + cantidad,
     0
   );
+  const totalPrecio = Object.values(carrito).reduce(
+    (a, { cantidad, precio }) => a + cantidad * precio,
+    0
+  );
   console.log(totalCantidad);
+
+  template.querySelectorAll("td")[0].textContent = totalCantidad;
+  template.querySelector("span").textContent = totalPrecio;
+
+  const clone = template.cloneNode(true);
+  fragment.appendChild(clone);
+  tablaFooter.appendChild(fragment);
+
+  const botonVaciar = document.querySelector("#vaciar-carrito");
+  botonVaciar.addEventListener("click", () => {
+    carrito = {};
+    selectCarrito();
+  });
 };
 
 const botonesCarrito = () => {};
