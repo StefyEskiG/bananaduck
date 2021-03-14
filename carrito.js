@@ -19,7 +19,7 @@ function vaciarCarrito() {
   dibujarTablaDelCarrito();
 }
 
-const contendorProductos = document.querySelector("#container-prods");
+const $contendorProductos = $("#container-prods");
 const dibujarCatalogoDeProductos = (productos) => {
   const template = document.querySelector("#template-prods").content;
   const fragment = document.createDocumentFragment();
@@ -32,7 +32,7 @@ const dibujarCatalogoDeProductos = (productos) => {
     const clone = template.cloneNode(true);
     fragment.appendChild(clone);
   });
-  contendorProductos.appendChild(fragment);
+  $contendorProductos.append(fragment);
   botonAgregarAlCarrito(productos);
 };
 
@@ -43,9 +43,9 @@ if (carritoGuardado) {
 }
 
 const botonAgregarAlCarrito = (data) => {
-  const botones = document.querySelectorAll(".card button");
-  botones.forEach((btn) => {
-    btn.addEventListener("click", () => {
+  const $botones = $(".card button");
+  $botones.each((index, btn) => {
+    $(btn).on("click", () => {
       const producto = data.find(
         (item) => item.id === parseInt(btn.dataset.id)
       );
@@ -60,11 +60,11 @@ const botonAgregarAlCarrito = (data) => {
 };
 
 const botonesCarrito = () => {
-  const botonesAgregar = document.querySelectorAll("#items .btn-info");
-  const botonesEliminar = document.querySelectorAll("#items .btn-danger");
+  const $botonesAgregar = $("#items .btn-info");
+  const $botonesEliminar = $("#items .btn-danger");
 
-  botonesAgregar.forEach((btn) => {
-    btn.addEventListener("click", () => {
+  $botonesAgregar.each((index, btn) => {
+    $(btn).on("click", () => {
       console.log("agregando...");
       const producto = carrito[btn.dataset.id];
       producto.cantidad++;
@@ -73,8 +73,8 @@ const botonesCarrito = () => {
     });
   });
 
-  botonesEliminar.forEach((btn) => {
-    btn.addEventListener("click", () => {
+  $botonesEliminar.each((index, btn) => {
+    $(btn).on("click", () => {
       console.log("eliminando...");
       const producto = carrito[btn.dataset.id];
       producto.cantidad--;
