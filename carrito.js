@@ -21,18 +21,17 @@ function vaciarCarrito() {
 
 const $contendorProductos = $("#container-prods");
 const dibujarCatalogoDeProductos = (productos) => {
-  const template = document.querySelector("#template-prods").content;
-  const fragment = document.createDocumentFragment();
+  const $template = $("#template-prods").contents();
 
   productos.forEach((producto) => {
-    template.querySelector("img").setAttribute("src", producto.imagen);
-    template.querySelector("h5").textContent = producto.title;
-    template.querySelector("p span").textContent = producto.precio;
-    template.querySelector("button").dataset.id = producto.id;
-    const clone = template.cloneNode(true);
-    fragment.appendChild(clone);
+    $template.find("img").attr("src", producto.imagen);
+    $template.find("h5").text(producto.title);
+    $template.find("p span").text(producto.precio);
+    $template.find("button").get(0).dataset.id = producto.id;
+    const $clone = $template.clone(true);
+
+    $contendorProductos.append($clone);
   });
-  $contendorProductos.append(fragment);
   botonAgregarAlCarrito(productos);
 };
 
