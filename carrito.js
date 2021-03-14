@@ -87,26 +87,23 @@ const botonesCarrito = () => {
   });
 };
 
-const tablaDeCarrito = document.querySelector("#items");
+const $tablaDeCarrito = $("#items");
 const dibujarTablaDelCarrito = () => {
-  tablaDeCarrito.innerHTML = "";
-  const template = document.querySelector("#template-carrito").content;
-  const fragment = document.createDocumentFragment();
+  $tablaDeCarrito.empty();
+  const $template = $("#template-carrito").contents();
+
   Object.values(carrito).forEach((producto) => {
     //console.log(producto);
-    template.querySelector("th").textContent = producto.id;
-    template.querySelectorAll("td")[0].textContent = producto.title;
-    template.querySelectorAll("td")[1].textContent = producto.cantidad;
-    template.querySelector("span").textContent =
-      producto.precio * producto.cantidad;
+    $template.find("th").text(producto.id);
+    $template.find("td").eq(0).text(producto.title);
+    $template.find("td").eq(1).text(producto.cantidad);
+    $template.find("span").text(producto.precio * producto.cantidad);
 
-    template.querySelector(".btn-info").dataset.id = producto.id;
-    template.querySelector(".btn-danger").dataset.id = producto.id;
-
-    const clone = template.cloneNode(true);
-    fragment.appendChild(clone);
+    $template.find(".btn-info").get(0).dataset.id = producto.id;
+    $template.find(".btn-danger").get(0).dataset.id = producto.id;
+    const $clone = $template.clone(true);
+    $tablaDeCarrito.append($clone);
   });
-  tablaDeCarrito.appendChild(fragment);
 
   dibujarFooterDeCarrito();
   botonesCarrito();
