@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage Bananaduck</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="estilos/onestyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="cabecera">
+        <div class="row justify-content-start">
+          <div class="logo">
+            <img src="imagenes/logobananaduck.png" alt="bananaduck" />
+          </div>
+        </div>
+
+        <div class="main-menu">
+          <a href="index.html"> ~~ SHOPPING ~~ </a>
+
+          <a href="index.html"> ~~ CARRITO ~~ </a>
+
+          <a href="contactanos.html"> ~~ CONTACTO ~~ </a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+        <h1 class="titulo">HACE TU PEDIDO EN BANANADUCK</h1>
+        <div class="elFormulario">
+          <form>
+            <label for="Nombre">NOMBRE:</label>
+
+            <input type="text" id="Nombre" name="name" placeholder="Nombre" />
+
+            <label for="Apellido">APELLIDO</label>
+
+            <input
+              type="text"
+              id="Apellido"
+              name="name"
+              placeholder="Apellido"
+            />
+
+            <label for="Mail">MAIL</label>
+
+            <input type="text" id="Mail" name="name" placeholder="Mail" />
+
+            <label for="Mensaje">PEDIDO</label>
+
+            <textarea placeholder="Dejanos tu pedido"></textarea>
+
+            <input type="submit" class="enviarForm" value="Enviar Formulario" />
+            <input type="reset" class="borrarForm" value="Borrar datos" />
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
