@@ -110,11 +110,10 @@ const dibujarTablaDelCarrito = () => {
   guardarCarritoEnMemoria(carrito);
 };
 
-const tablaFooter = document.querySelector("#footer-carrito");
+const $tablaFooter = $("#footer-carrito");
 const dibujarFooterDeCarrito = () => {
-  tablaFooter.innerHTML = "";
-  const template = document.querySelector("#template-footer").content;
-  const fragment = document.createDocumentFragment();
+  $tablaFooter.empty();
+  const $template = $("#template-footer").contents();
 
   const totalCantidad = Object.values(carrito).reduce(
     (a, { cantidad }) => a + cantidad,
@@ -124,14 +123,12 @@ const dibujarFooterDeCarrito = () => {
     (a, { cantidad, precio }) => a + cantidad * precio,
     0
   );
-  //console.log(totalCantidad);
+  $template.filter(".cantidad").text(totalCantidad);
+  $template.find("span").text(totalPrecio);
 
-  template.querySelectorAll("td")[0].textContent = totalCantidad;
-  template.querySelector("span").textContent = totalPrecio;
+  const $clone = $template.clone(true);
 
-  const clone = template.cloneNode(true);
-  fragment.appendChild(clone);
-  tablaFooter.appendChild(fragment);
+  $tablaFooter.append($clone);
 
   const $botonVaciar = $("#vaciar-carrito");
   $botonVaciar.on("click", vaciarCarrito);
