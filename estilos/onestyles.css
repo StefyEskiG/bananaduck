@@ -61,6 +61,11 @@
   margin-left: 25rem;
 }
 
+.producto-card {
+  padding-top: 2.5rem;
+  display: none;
+}
+
 .pieDePagina {
   background-color: #f7ffaa;
   padding-top: 15px;

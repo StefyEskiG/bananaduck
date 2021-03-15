@@ -64,13 +64,15 @@
       <div id="seccion-shopping">
         <div class="row" id="container-prods"></div>
         <template id="template-prods">
-          <div class="col-12 col-md-4 mb-2">
+          <div class="col-12 col-md-4 mb-2 producto-card">
             <div class="card">
               <img src="" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title"></h5>
                 <p class="card-text">$ <span>5000</span></p>
-                <button class="btn btn-warning">Agregar al carrito</button>
+                <button class="btn btn-warning agregarCarrito">
+                  Agregar al carrito
+                </button>
               </div>
             </div>
           </div>
@@ -113,7 +115,7 @@
       </div>
 
       <template id="template-carrito">
-        <tr>
+        <tr class="carrito-producto">
           <th scope="row"></th>
           <td></td>
           <td></td>

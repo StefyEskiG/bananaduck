@@ -16,7 +16,7 @@ function guardarCarritoEnMemoria(carrito) {
 
 function vaciarCarrito() {
   carrito = {};
-  dibujarTablaDelCarrito();
+  $(".carrito-producto").fadeOut("slow", dibujarTablaDelCarrito);
 }
 
 const $contendorProductos = $("#container-prods");
@@ -31,7 +31,9 @@ const dibujarCatalogoDeProductos = (productos) => {
     const $clone = $template.clone(true);
 
     $contendorProductos.append($clone);
+    $clone.fadeIn(1500);
   });
+
   botonAgregarAlCarrito(productos);
 };
 
